@@ -1,0 +1,155 @@
+/* Paleta de Cores */
+:root {
+    --primary-color: #2c3e50; /* Azul escuro */
+    --secondary-color: #34495e; /* Azul intermediário */
+    --accent-color: #ff5733; /* Laranja vibrante */
+    --text-color: #333; /* Cor do texto principal */
+    --background-color: #f4f4f9; /* Fundo geral */
+    --form-bg-color: #ffffff; /* Fundo do formulário */
+    --form-border-color: #ddd; /* Cor das bordas */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo Geral */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+/* Contêiner Geral da Página */
+.agendamento-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: var(--form-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 7, 7);
+}
+
+/* Título */
+.agendamento-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Texto Explicativo */
+.agendamento-container p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilo do Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+form input,
+form select,
+form button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--form-border-color);
+}
+
+form input:focus,
+form select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
+    outline: none;
+}
+
+/* Botão de Envio */
+form button {
+    background: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Responsividade para Telemóveis */
+@media (max-width: 768px) {
+    /* Ajustar o contêiner geral */
+    .container {
+        padding: 16px;
+    }
+
+    /* Calendário */
+    #calendar {
+        margin-bottom: 20px;
+    }
+
+    /* Formulário */
+    form {
+        padding: 16px;
+    }
+
+    form .mb-4 label {
+        font-size: 0.9rem;
+    }
+
+    form .mb-4 input,
+    form .mb-4 select,
+    form button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    /* Títulos */
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsividade para Telemóveis Muito Pequenos */
+@media (max-width: 480px) {
+    /* Reduzir espaçamentos ainda mais */
+    form {
+        padding: 12px;
+    }
+
+    .mb-4 input,
+    .mb-4 select,
+    button {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.25rem;
+    }
+}

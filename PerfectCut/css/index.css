@@ -1,0 +1,152 @@
+/* Paleta de Cores */
+:root {
+    --primary-color: #2c3e50; /* Fundo principal */
+    --secondary-color: #34495e; /* Fundo secundário */
+    --accent-color: #ff5733; /* Destaques e botões */
+    --text-color: #ffffff; /* Texto principal */
+    --background-color: #f5f5f5; /* Fundo geral */
+}
+
+/* Reseta margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+    overflow-x: hidden; /* Evita rolagem lateral */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('../images/barber1.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 200px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(255, 87, 51, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 87, 51, 0.5);
+}
+
+/* Seções Internas */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Responsividade */
+/* Telas médias */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+}
+
+/* Telas pequenas */
+@media (max-width: 768px) {
+    .hero {
+        padding: 150px 15px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .section {
+        padding: 40px 15px;
+    }
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 10px;
+    }
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    .section {
+        padding: 30px 10px;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .section-content {
+        font-size: 0.9rem;
+    }
+}

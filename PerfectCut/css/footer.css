@@ -1,0 +1,51 @@
+/* Estilo do Contêiner Principal */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima da página */
+    margin: 0; /* Remove margens padrão */
+}
+
+main {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    padding: 0; /* Remove qualquer padding extra */
+    margin: 0; /* Remove margens */
+}
+
+/* Rodapé */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Reduzido para otimizar espaço */
+    margin: 0; /* Remove margens */
+    width: 100%; /* Ocupa toda a largura */
+    margin-top: auto; /* Garante que o rodapé fique no fim */
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 0.8rem;
+    }
+}
